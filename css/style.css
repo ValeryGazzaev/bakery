@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Playfair+Display:400,700&display=swap');
+
+@import url('core.css');
+
+@font-face {
+	font-family: 'ProximaNovaT-Thin';
+	src: url('../assets/fonts/ProximaNovaT-Thin.woff') format('woff');
+	font-weight: 100;
+}
