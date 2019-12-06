@@ -14,9 +14,18 @@
 	margin: 0 auto;
 }
 
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
 body {
 	font-size: 14px;
 	line-height: 20px;
-	font-family: 'ProximaNovaT-Thin', 'Arial', sans-serif;
+	font-family: 'ProximaNovaT-Regular', 'Arial', sans-serif;
 	color: #56534c;
+	color: #fff;
 }

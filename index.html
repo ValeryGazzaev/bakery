@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon-32x32.png">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
 	<title>Bakery</title>
 
 	<!--[if lt IE 9]>
@@ -20,12 +21,12 @@
 		<div class="header">
 			<div class="header-wrap">
 				<div class="header-line">
-					<div class="header-logo">
-						<p>Gustoso</p>
-					</div>
+					<div class="header-line-wrap wrapper">
+					<p class="header-logo">Gustoso</p>
 					<ul class="header-menu">
-						<li><a href="#">Welcome</a></li>
-						<li>Menu
+						<li><a href="#" class="menu-item">Welcome</a></li><span class="tilda">~</span>
+						<li class="menu list">
+							<span class="menu-item">Menu</span>
 							<ul>
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
@@ -33,17 +34,17 @@
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
 							</ul>
-						</li>
-						<li>Reservations	
+						</li><span class="tilda">~</span>
+						<li class="reservations list"><span class="menu-item">Reservations</span>	
 							<ul>
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
 								<li><a href="#">Some item</a></li>
-							</ul></li>
-						<li><a href="#">News</a></li>
-						<li><a href="#">Contact</a></li>
+							</ul></li><span class="tilda">~</span>
+						<li><a href="#" class="menu-item">News</a></li><span class="tilda">~</span>
+						<li><a href="#" class="menu-item">Contact</a></li>
 					</ul>
 					<div class="header-social">
 						<a href="#"><i class="fab fa-twitter"></i></a>
@@ -51,10 +52,12 @@
 						<a href="#"><i class="fab fa-instagram"></i></a>
 					</div>
 				</div>
+				</div>
 			</div>
 			<div class="header-middle">
 				<p class="header-promo">Pastry with love</p>
 				<p>We’re bringing you fresh ingredients every day in ways you can’t resist.</p>
+				<a href="#">Our menu</a>
 			</div>
 		</div>
 	</div>
