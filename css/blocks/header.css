@@ -25,7 +25,9 @@
 }
 
 .header-line {
+	position: relative;
 	background-color: rgba(86, 83, 76, 0.47);
+	z-index: 10;
 }
 
 .header-logo {
@@ -114,4 +116,76 @@
 .header-social a:hover {
 	transform: scale(1.06);
 	text-shadow: 0 5px 20px rgba(255, 255, 255, 1);
+}
+
+.header-middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.header-middle::before {
+	position: absolute;
+	content: "";
+	width: 100vw;
+	height: 100vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-image: url('../../img/h-bg_shadow.png');
+}
+
+.header-middle-wrap {
+	position: relative;
+	z-index: 10;
+}
+
+.header-promo {
+	width: 100vw;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 92px;
+	line-height: 100px;
+	letter-spacing: 6.9px;
+	text-shadow: 0 1px 1px #3d3029;
+}
+
+.header-middle p:nth-child(2) {
+	max-width: 550px;
+	font-family: 'ProximaNovaT-Regular', 'Arial', sans-serif;
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 2.4px;
+	text-shadow: 0 1px 1px #3d3029;
+	margin: 141px auto 64px;
+}
+
+.header-middle-btn {
+	display: inline-block;
+	border: 1px dashed rgb(158, 156, 147);
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 48px;
+	letter-spacing: 4.2px;
+	background-color: rgba(86, 83, 76, 0.47);
+  width: 198px;
+  height: 48px;
+  color: #fff;
+} 
+
+.header-middle-btn:hover {
+	background-color: rgba(255, 255, 255, 0.47);
+	color: rgba(86, 83, 76, 1);
+}
+
+.header-middle-btn:active {
+	transform: scale(0.98);
 }
