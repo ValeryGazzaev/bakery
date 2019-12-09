@@ -27,6 +27,7 @@
 .header-line {
 	position: relative;
 	background-color: rgba(86, 83, 76, 0.47);
+	padding: 0 20px;
 	z-index: 10;
 }
 
@@ -37,6 +38,31 @@
 	letter-spacing: 9px;
 	color: #fff;
 	margin-top: -6px;
+}
+
+.header input {
+	display: none;
+}
+
+.header label {
+	position: absolute;
+	right: 150px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 25px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	opacity: 0;
+}
+
+.header label:before {
+	position: absolute;
+	content: "";
+	width: 40px;
+	border-top: 3px solid #fff;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .header-menu {
@@ -141,6 +167,21 @@
 	background-image: url('../../img/h-bg_shadow.png');
 }
 
+.header-middle::after {
+	position: absolute;
+	content: "";
+	width: 190px;
+	height: 12px;
+	top: 39.6%;
+	left: 50%;
+	filter: drop-shadow(0 1px 0px #3d3029);
+	transform: translate(-50%, -50%);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('../../img/header-promo-dline.png');
+	z-index: 20;
+}
+
 .header-middle-wrap {
 	position: relative;
 	z-index: 10;
@@ -163,7 +204,7 @@
 	line-height: 36px;
 	letter-spacing: 2.4px;
 	text-shadow: 0 1px 1px #3d3029;
-	margin: 141px auto 64px;
+	margin: 132px auto 64px;
 }
 
 .header-middle-btn {
@@ -176,9 +217,9 @@
 	line-height: 48px;
 	letter-spacing: 4.2px;
 	background-color: rgba(86, 83, 76, 0.47);
-  width: 198px;
-  height: 48px;
-  color: #fff;
+	width: 198px;
+	height: 48px;
+	color: #fff;
 } 
 
 .header-middle-btn:hover {
@@ -188,4 +229,34 @@
 
 .header-middle-btn:active {
 	transform: scale(0.98);
+}
+
+@media (max-width: 1150px) {
+	.header label {
+		opacity: 1;
+		z-index: 20;
+	}
+	.header-menu {
+		position: absolute;
+		right: 150px;
+		width: 170px;
+		top: 66px;
+		border-radius: 0 0 10px 10px;
+		background-color: rgba(86, 83, 76, 0.47);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.5s ease;
+		display: block;
+		z-index: 20;
+	}
+	.header-menu li {
+		text-indent: 10px;
+	}
+	.header-menu .tilda {
+		margin-left: 10px;
+	}
+	.header-line-wrap input:checked ~ .header-menu {
+		opacity: 1;
+		visibility: visible;
+	}
 }
