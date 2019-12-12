@@ -23,9 +23,11 @@ ul {
 }
 
 body {
+	position: relative;
 	font-size: 14px;
 	line-height: 20px;
 	font-family: 'ProximaNovaT-Regular', 'Arial', sans-serif;
 	color: #56534c;
 	color: #fff;
 }
+
