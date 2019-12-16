@@ -236,6 +236,7 @@
 	background-position: -316px -270px;
 }
 
+
 @media (max-width: 1225px) {
 	.production-wrap {
 		-moz-flex-direction: column;
@@ -272,5 +273,10 @@
 	.block-rigth .images {
 		margin-bottom: 30px;
 	}
+}
 
+@media (max-height: 340px) {
+	.production::before {
+		display: none;
+	}
 }

@@ -244,6 +244,25 @@
 	transform: scale(0.98);
 }
 
+@media (max-width: 1151px) {
+		.header-menu {
+		position: absolute;
+		right: 150px;
+		width: 170px;
+		top: 66px;
+		border-radius: 0 0 5px 5px;
+		background-color: rgba(86, 83, 76, 0.47);
+		box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 1);
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		display: block;
+		z-index: 20;
+	}
+	
+}
+
 @media (max-width: 1150px) {
 	.header label {
 		opacity: 1;

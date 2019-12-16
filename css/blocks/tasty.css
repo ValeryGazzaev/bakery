@@ -1,0 +1,236 @@
+.tasty {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-image: url("../../img/pencakes/pancakes-bg.jpg");
+	padding: 140px 0 109px;
+	color: #56534c;
+}
+
+.tasty-wrap {
+	position: relative;
+	max-width: 965px;
+	height: 513px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.ready-in {
+	position: absolute;
+	top: -42px;
+	right: -105px;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	box-shadow: 0 25px 54px 0  rgba(105, 80, 58, 0.45);
+	background-image: url('../../img/pencakes/pancakes-ready.png');
+	z-index: 20;
+}
+
+.ready-in p:nth-child(1) {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 1.8px;
+	color: #a47d5e;
+	margin-top: 25px;
+}
+
+.ready-in p:nth-child(2) {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 92px;
+	line-height: 101px;
+	letter-spacing: 9.2px;
+	color: #dfc691;
+}
+
+.ready-in p:nth-child(3) {
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 1.8px;
+	color: #979285;
+	margin-top: -5px;
+}
+
+.picture-left {
+	flex-basis: 42.5%;
+	height: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url("../../img/pencakes/pancakes-wg.jpg.png");
+}
+
+#slide-btn {
+	display: none;
+}
+
+.slide-btn-slik {
+	position: absolute;
+	display: block;
+	left: 40%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.slide-btn-slik span {
+	position: absolute;
+	left: 46%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 1px;
+	height: 16px;
+	background-color: #d8bba3;
+}
+
+.slide-btn-slik span::after,
+.slide-btn-slik span::before {
+	position: absolute;
+	content: "";
+	left: -5px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1px;
+	height: 16px;
+	background-color: #d8bba3;
+}
+
+.slide-btn-slik span::after {
+	left: auto;
+	right: -5px;
+}
+
+.tasty-rb {
+	position: relative;
+	flex-basis: calc(57.5% - 147px);
+	background-color: #fff;
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url('../../img/pencakes/pancakes-meal.png');
+	padding: 74px 84px 40px 63px;
+}
+
+.tasty-text p:nth-child(2) {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 1.4px;
+	color: #a47d5e;
+}
+
+.tasty-text p:nth-child(3) {
+	font-family: 'ProximaNovaT-Regular', 'Arial', sans-serif;
+	line-height: 24px;
+	letter-spacing: 1.4px;
+	margin: 52px 0 100px;
+}
+
+.tasty-slider {
+	position: absolute;
+	width: 332px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.tasty-slider input {
+	display: none;
+}
+
+.tasty-slider-inner {
+	overflow-x: hidden;
+}
+
+.tasty-slider-slides {
+	width: 550px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	transition: all 1s ease;
+}
+
+.tasty-slider-slides .slides a {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background-position: -47px 0;
+	background-image: url('../../img/pencakes/slide-img.png');
+}
+
+.tasty-slider-slides .slides .image-2 {
+		background-position: -167px 0;
+}
+
+.tasty-slider-slides .slides .image-3 {
+		background-position: -287px 0;
+}
+
+.tasty-slider-controls {
+	position: absolute;
+	width: 430px;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(3),
+#tasty-btn-2:checked ~ .tasty-slider-controls label:nth-child(1),
+#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(2) {
+	position: absolute;
+	display: block;
+	background-position: 0 -29px;
+	width: 32px;
+	height: 32px;
+	background-image: url('../../img/pencakes/slide-img.png');
+}
+
+#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(3) {
+	transform: scaleX(-1);
+	background-position: -394px -29px;
+}
+
+
+#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(2),
+#tasty-btn-2:checked ~ .tasty-slider-controls label:nth-child(3),
+#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(1) {
+	position: absolute;
+	right: 0;
+	display: block;
+	background-position: 0 -29px;
+	width: 32px;
+	height: 32px;
+	background-image: url('../../img/pencakes/slide-img.png');
+	transform: scaleX(-1);
+}
+
+#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(1) {
+	transform: scaleX(1);
+	background-position: -394px -29px;
+}
+
+#tasty-btn-1:checked ~ .tasty-slider-inner .tasty-slider-slides {
+	transform: translate(0);
+}
+#tasty-btn-2:checked ~ .tasty-slider-inner .tasty-slider-slides {
+	transform: translate(-110px);
+}
+#tasty-btn-3:checked ~ .tasty-slider-inner .tasty-slider-slides {
+	transform: translate(-220px);
+}
