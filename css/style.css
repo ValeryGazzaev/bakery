@@ -4,6 +4,7 @@
 @import url('blocks/header.css');
 @import url('blocks/production.css');
 @import url('blocks/tasty.css');
+@import url('blocks/breakfast.css');
 
 @font-face {
 	font-family: 'ProximaNovaT-Thin';

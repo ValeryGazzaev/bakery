@@ -67,6 +67,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url("../../img/pencakes/pancakes-wg.jpg.png");
+	transition: all 1s ease;
 }
 
 .picture-left-inner {
@@ -87,7 +88,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
-/* need to apply js stars but i`m dunno how)) */
+/* need to apply js stars, but i`m dunno how)) */
 .picture-left i {
 	color: #fff;
 	font-size: 18px;
@@ -155,7 +156,7 @@
 
 #slide-btn:checked ~ .tasty-rb {
 	position: absolute;
-	flex-basis: 100%;
+	flex-basis: calc(100% - 0px)!important;
 	height: 400px !important;
 }
 
