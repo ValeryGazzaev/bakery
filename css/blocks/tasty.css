@@ -2,7 +2,7 @@
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-image: url("../../img/pencakes/pancakes-bg.jpg");
-	padding: 140px 0 109px;
+	padding: 140px 20px 109px;
 	color: #56534c;
 }
 
@@ -161,17 +161,25 @@
 }
 
 #slide-btn:checked ~ .slide-btn-slik {
-	left: -25px;
+	width: 0;
+	height: 0;
+	left: 0;
+	border-radius: 1px;
+	box-shadow: -2px 0 2px 0 rgba(0, 0, 0, 0.25);
+	border: 30px solid rgba(216, 187, 163, 0.4);
+	border-right-width: 0;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	box-shadow: none;
 }
 
-.tasty-text p:nth-child(2) {
-	text-transform: uppercase;
-	font-family: 'Alegreya', serif;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 30px;
-	letter-spacing: 1.4px;
-	color: #a47d5e;
+#slide-btn:checked ~ .slide-btn-slik span {
+	left: -20px;
+	background-color: #fff;
+}
+#slide-btn:checked ~ .slide-btn-slik span::after,
+#slide-btn:checked ~ .slide-btn-slik span::before {
+	background-color: #fff;
 }
 
 .tasty-text p:nth-child(3) {
@@ -216,11 +224,11 @@
 }
 
 .tasty-slider-slides .slides .image-2 {
-		background-position: -167px 0;
+	background-position: -167px 0;
 }
 
 .tasty-slider-slides .slides .image-3 {
-		background-position: -287px 0;
+	background-position: -287px 0;
 }
 
 .tasty-slider-controls {
@@ -274,4 +282,67 @@
 }
 #tasty-btn-3:checked ~ .tasty-slider-inner .tasty-slider-slides {
 	transform: translate(-220px);
+}
+
+@media (max-width: 1185px) {
+	.ready-in {
+		top: 20px;
+		right: 0;
+		width: 100px;
+		height: 100px;
+		box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.32);
+		background-image: url('../../img/pencakes/pancakes-ready.png');
+	}
+	.ready-in p:nth-child(1) {
+		font-size: 18px;
+		line-height: 30px;
+		margin-top: 0;
+	}
+	.ready-in p:nth-child(2) {
+		font-size: 50px;
+		line-height: 54px;
+		letter-spacing: 1.8px;
+		margin-top: -10px;
+	}
+}
+
+@media (max-width: 980px) {
+	.tasty {
+		padding: 60px 20px;
+	}
+	.tasty-wrap {
+		height: auto;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.tasty-rb {
+		position: relative;
+		flex-basis: 100%;
+	}
+	.slide-btn-slik {
+		display: none;
+	}
+	.tasty-slider {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.picture-left {
+		position: relative;
+		flex-basis: auto;
+		bottom: 0;
+		width: 100%;
+		height: 400px;
+		background-image: url('../../img/pencakes/pancakes-wgf.png');
+		transition: none;
+	}
+	#slide-btn {
+		display: none;
+	}
+	#slide-btn:checked ~ .tasty-rb {
+		position: relative;
+	}
 }
