@@ -1,5 +1,4 @@
 .tasty {
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-image: url("../../img/pencakes/pancakes-bg.jpg");
 	padding: 140px 20px 109px;
@@ -10,10 +9,10 @@
 	position: relative;
 	max-width: 965px;
 	height: 513px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
 	display: flex;
 }
 
@@ -63,30 +62,32 @@
 	position: relative;
 	flex-basis: 42.5%;
 	height: 100%;
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url("../../img/pencakes/pancakes-wg.jpg.png");
+	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
 .picture-left-inner {
 	position: absolute;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
 	display: flex;
-	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
-	-ms-flex-direction: column;
 	-o-flex-direction: column;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
 	height: 143px;
 	left: 28px;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 /* need to apply js stars, but i`m dunno how)) */
 .picture-left i {
@@ -95,7 +96,8 @@
 }
 
 .picture-left .es:hover {
-	filter: drop-shadow(-5px -5px 5px #fff);
+	-webkit-filter: drop-shadow(-5px -5px 5px #fff);
+	        filter: drop-shadow(-5px -5px 5px #fff);
 }
 
 .tasty-rb {
@@ -118,7 +120,8 @@
 	display: block;
 	left: 40%;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	width: 54px;
 	height: 54px;
 	border-radius: 50%;
@@ -131,7 +134,8 @@
 	position: absolute;
 	left: 46%;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	width: 1px;
 	height: 16px;
 	background-color: #d8bba3;
@@ -143,7 +147,8 @@
 	content: "";
 	left: -5px;
 	top: 50%;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	width: 1px;
 	height: 16px;
 	background-color: #d8bba3;
@@ -188,12 +193,12 @@
 	letter-spacing: 1.4px;
 	margin: 52px 0 100px;
 }
-
 .tasty-slider {
 	position: absolute;
 	width: 332px;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 
 .tasty-slider input {
@@ -204,14 +209,20 @@
 	overflow-x: hidden;
 }
 
+.tasty-slider-controls label:nth-child(4),
+.tasty-slider-controls label:nth-child(5) {
+	display: none;
+}
+
 .tasty-slider-slides {
 	width: 550px;
-	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
+	display: -webkit-box;
 	display: flex;
 	justify-content: space-around;
+	-webkit-transition: all 1s ease;
 	transition: all 1s ease;
 }
 
@@ -236,7 +247,8 @@
 	width: 430px;
 	top: 30%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	z-index: 10;
 }
 
@@ -252,7 +264,8 @@
 }
 
 #tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(3) {
-	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
 	background-position: -394px -29px;
 }
 
@@ -266,22 +279,27 @@
 	width: 32px;
 	height: 32px;
 	background-image: url('../../img/pencakes/slide-img.png');
-	transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
 }
 
 #tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(1) {
-	transform: scaleX(1);
+	-webkit-transform: scaleX(1);
+	        transform: scaleX(1);
 	background-position: -394px -29px;
 }
 
 #tasty-btn-1:checked ~ .tasty-slider-inner .tasty-slider-slides {
-	transform: translate(0);
+	-webkit-transform: translate(0);
+	        transform: translate(0);
 }
 #tasty-btn-2:checked ~ .tasty-slider-inner .tasty-slider-slides {
-	transform: translate(-110px);
+	-webkit-transform: translate(-110px);
+	        transform: translate(-110px);
 }
 #tasty-btn-3:checked ~ .tasty-slider-inner .tasty-slider-slides {
-	transform: translate(-220px);
+	-webkit-transform: translate(-220px);
+	        transform: translate(-220px);
 }
 
 @media (max-width: 1185px) {
@@ -312,11 +330,11 @@
 	}
 	.tasty-wrap {
 		height: auto;
-		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
-		-ms-flex-direction: column;
 		-o-flex-direction: column;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
 	}
 	.tasty-rb {
 		position: relative;
@@ -327,8 +345,6 @@
 	}
 	.tasty-slider {
 		position: relative;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 	.picture-left {
 		position: relative;
@@ -337,6 +353,7 @@
 		width: 100%;
 		height: 400px;
 		background-image: url('../../img/pencakes/pancakes-wgf.png');
+		-webkit-transition: none;
 		transition: none;
 	}
 	#slide-btn {
@@ -344,5 +361,90 @@
 	}
 	#slide-btn:checked ~ .tasty-rb {
 		position: relative;
+	}
+}
+
+@media (max-width: 540px) {
+	.tasty-rb {
+		padding: 60px 40px;
+		box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.25);
+	}
+	.tasty-slider {
+		width: 90px;
+	}
+	.tasty-slider-slides {
+		width: 500%;
+	}
+	.tasty-slider-slides .slides {
+		width: 90px;
+	}
+	.tasty-slider-controls {
+		position: absolute;
+		width: 200px;
+	}
+	.tasty-slider-controls label:nth-child(4),
+	.tasty-slider-controls label:nth-child(5) {
+		display: block;
+	}
+	#tasty-btn-1:checked ~ .tasty-slider-inner .tasty-slider-slides {
+		-webkit-transform: translate(0);
+		        transform: translate(0);
+	}
+	#tasty-btn-2:checked ~ .tasty-slider-inner .tasty-slider-slides {
+		-webkit-transform: translate(-90px);
+		        transform: translate(-90px);
+	}
+	#tasty-btn-3:checked ~ .tasty-slider-inner .tasty-slider-slides {
+		-webkit-transform: translate(-180px);
+		        transform: translate(-180px);
+	}
+	#tasty-btn-4:checked ~ .tasty-slider-inner .tasty-slider-slides {
+		-webkit-transform: translate(-270px);
+		        transform: translate(-270px);
+	}
+	#tasty-btn-5:checked ~ .tasty-slider-inner .tasty-slider-slides {
+		-webkit-transform: translate(-360px);
+		        transform: translate(-360px);
+	}
+	#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(5),
+	#tasty-btn-2:checked ~ .tasty-slider-controls label:nth-child(1),
+	#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(2),
+	#tasty-btn-4:checked ~ .tasty-slider-controls label:nth-child(3), 
+	#tasty-btn-5:checked ~ .tasty-slider-controls label:nth-child(4){
+		position: absolute;
+		display: block;
+		background-position: 0 -29px;
+		width: 32px;
+		height: 32px;
+		background-image: url('../../img/pencakes/slide-img.png');
+	}
+	#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(1),
+	#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(3) {
+		display: none;
+	}
+	#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(5) {
+		-webkit-transform: scaleX(-1);
+		        transform: scaleX(-1);
+		background-position: -394px -29px;
+	}
+	#tasty-btn-1:checked ~ .tasty-slider-controls label:nth-child(2),
+	#tasty-btn-2:checked ~ .tasty-slider-controls label:nth-child(3),
+	#tasty-btn-3:checked ~ .tasty-slider-controls label:nth-child(4),
+	#tasty-btn-4:checked ~ .tasty-slider-controls label:nth-child(5),
+	#tasty-btn-5:checked ~ .tasty-slider-controls label:nth-child(1) {
+		position: absolute;
+		right: 0;
+		display: block;
+		background-position: 0 -29px;
+		width: 32px;
+		height: 32px;
+		background-image: url('../../img/pencakes/slide-img.png');
+		-webkit-transform: scaleX(-1);
+		        transform: scaleX(-1);
+	}
+	#tasty-btn-5:checked ~ .tasty-slider-controls label:nth-child(1) {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+		background-position: -394px -29px;
 	}
 }
