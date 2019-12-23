@@ -1,9 +1,11 @@
 .breakfast {
+	position: relative;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url('../../img/breakfast/breakfast-bg.jpg');
 	padding: 67px 0 71px;
+	z-index: -1;
 }
 
 .rigth-top,
@@ -86,9 +88,47 @@
 }
 
 .breakfast-rigth {
+	position: relative;
+	display: block;
 	text-align: center;
-	flex-basis: 466px;
+	flex-basis: 442px;
+	height: 601px;
 	background-color: #fff;
 	color: #56534c;
+	box-shadow: 18px 0 16px 0 rgba(0, 0, 0, 0.49);
+}
+.breakfast-rigth::after,
+.breakfast-rigth::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 26px;
+	width: 454px;
+	height: 550px;
+	background-color: #fff;
+	box-shadow: 18px 0 16px 0 rgba(0, 0, 0, 0.49);
+	z-index: -1;
+} 
+
+.breakfast-rigth::after {
+	background-color: #fff;
+	top: 50px;
+	width: 466px;
+	height: 500px;
+	z-index: -2;
+}
+
+.breakfast-rigth .rigth-top {
+	max-width: 230px;
+	margin: 0 auto;
+}
+
+.breakfast-rigth .rigth-top p {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0.7px;
 }
 
