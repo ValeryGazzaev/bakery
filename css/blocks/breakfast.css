@@ -91,36 +91,57 @@
 	position: relative;
 	display: block;
 	text-align: center;
-	flex-basis: 442px;
-	height: 601px;
-	background-color: #fff;
+	flex-basis: 432px;
+	height: 591px;
+	background-color: #f3f1e9;
 	color: #56534c;
 	box-shadow: 18px 0 16px 0 rgba(0, 0, 0, 0.49);
+	border: 1px dashed #9e9c93;
+	outline: 10px solid #f3f1e9;
 }
+
 .breakfast-rigth::after,
 .breakfast-rigth::before {
 	position: absolute;
 	content: "";
 	left: 0;
 	top: 26px;
-	width: 454px;
-	height: 550px;
-	background-color: #fff;
+	width: 444px;
+	height: 540px;
+	background-color: #f3f1e9;
 	box-shadow: 18px 0 16px 0 rgba(0, 0, 0, 0.49);
+	border: 1px dashed #9e9c93;
+	outline: 9px solid #f3f1e9;
 	z-index: -1;
 } 
 
 .breakfast-rigth::after {
-	background-color: #fff;
+	background-color: #f3f1e9;
 	top: 50px;
-	width: 466px;
-	height: 500px;
+	width: 456px;
+	height: 490px;
 	z-index: -2;
 }
 
 .breakfast-rigth .rigth-top {
+	position: relative;
 	max-width: 230px;
-	margin: 0 auto;
+	margin: 34px auto 124px;
+}
+.breakfast-rigth .rigth-top::after {
+	position: absolute;
+	content: '';
+	width: 59px;
+	height: 59px;
+	left: 50%;
+	top: 33px;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	border: 1px solid #c3bfbb;
+	background-color: #f3f1e9;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../../img/breakfast/bf-cake.png');
 }
 
 .breakfast-rigth .rigth-top p {
@@ -132,3 +153,63 @@
 	letter-spacing: 0.7px;
 }
 
+.rigth-top .line-b {
+	position: absolute;
+	left: 50%;
+	top: 62px;
+	transform: translateX(-50%);
+	width: 344px;
+	height: 1px;
+	background-color: #c3bfbb;
+}
+
+.rigth-top .line-b::after,
+.rigth-top .line-b::before {
+	position: absolute;
+	content: "";
+	left: -10px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	border: 1px solid #c3bfbb;
+	width: 9px;
+	height: 9px;
+}
+
+.rigth-top .line-b::before {
+	left: auto;
+	right: -10px;
+}
+
+.rigth-middle p:nth-child(1) {
+	max-width: 339px;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 60px;
+	letter-spacing: 1.1px;
+	margin: 0 auto;
+}
+
+.rigth-middle p:nth-child(2) {
+	max-width: 334px;
+	font-family: 'ProximaNovaT-Regular';
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0.7px;
+	margin: 0 auto;
+}
+/* сверху отступы обработать */
+.rigth-middle a {
+	display: inline-block;
+  border: 1px solid rgb(158, 156, 147);
+  text-transform: uppercase;
+  font-family: 'Alegreya', serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 49px;
+  letter-spacing: 0.54px;
+  width: 190px;
+  height: 49px;
+  color: #a47d5e;
+}
