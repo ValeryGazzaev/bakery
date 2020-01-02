@@ -1,0 +1,16 @@
+.sandwitch {
+	background-color: #f3f1e9;
+	padding: 94px 0 70px;
+}
+
+.nav,
+.footer-nav,
+.sandwitch-inner {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
