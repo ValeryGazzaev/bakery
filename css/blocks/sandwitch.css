@@ -1,7 +1,7 @@
 .sandwitch {
 	position: relative;
 	background-color: #f3f1e9;
-	padding: 75px 0 70px;
+	padding: 75px 0 90px;
 }
 
 .sandwitch::before {
@@ -60,20 +60,108 @@
 	position: relative;
 	flex-basis: calc(100% - 23.3% - 120px);
 	height: 556px;
+	margin-top: 79px;
+	background-repeat: no-repeat;
 	background-image: url('../../img/sandwich/Ebene 11.jpg');
+}
+
+
+.sandwitch-rigth .inner-block {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: -23px;
+	right: 10px;
+	background-color: rgba(255, 255, 255, 0.80);
+	text-align: center;
+}
+
+.sandwitch-rigth .cook {
+	top: 178px;
+} 
+
+.sandwitch-rigth .inner-block p:nth-child(1) {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 1.8px;
+	font-weight: 700;
+	color: #a47d5e;
+	margin-top: 40px;
+}
+
+.sandwitch-rigth .inner-block p:nth-child(2) {
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 30px;
+	letter-spacing: 6px;
+	color: #56534c;
+	margin: 16px auto 14px;
+}
+
+.sandwitch-rigth .inner-block p:nth-child(3) {
+	font-family: 'Alegreya', serif;
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 1.8px;
+	color: #979285;
+}
+
+.sandwitch-rigth .ready-in {
+	top: auto;
+	bottom: -22px;
+	right: 10px;
+}
+
+.sandwitch-rigth a {
+	position: absolute;
+	bottom: -19px;
+	left: -22px;
+	width: 171px;
+	height: 60px;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Alegreya', serif;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 60px;
+	text-align: center;
+	letter-spacing: 0.9px;
+	background-color: #fff;
+	color: #dfc691;
+	border: 1px dashed #dfc691;
+}
+
+.sandwitch-rigth a:hover {
+	transform: scale(1.03);
+}
+
+.sandwitch-rigth a:active {
+	transform: scale(1);
+	color: #eee;
+	border: 1px dashed #eee;
 }
 
 .sandwitch .logo {
 	color: #56534c;
 } 
 
-.footer-nav .nav {
-	border-top: 1px solid #c2beba;
-	border-bottom: 1px solid #c2beba;
+.footer-nav {
+	-ms-align-items: center;
+	align-items: center;
+	margin-top: 114px;
 }
 
 .footer-nav .nav {
 	flex-basis: 514px;
+	border-top: 1px solid #c2beba;
+	border-bottom: 1px solid #c2beba;
+	padding: 26px 0;
+	-ms-align-items: center;
+	align-items: center;
 }
 
 .f-nav-1 {
@@ -82,20 +170,25 @@
 
 .f-nav-1 ul {
 	position: absolute;
-	opacity: 0;
-	visibility: hidden;
+	display: none;
 }
 
 .f-nav-1 > li:hover .sub-menu {
-	opacity: 1;
-	visibility: visible;
+	display: block;
+	top: -100px;
+	
 } 
 
+.footer-nav .sub-menu li a,
 .footer-nav .menu-item {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 4.2px;
 	font-family: 'Alegreya', serif;
+	color: #56534c;
+}
+
+.footer-nav .tilda {
 	color: #56534c;
 }
