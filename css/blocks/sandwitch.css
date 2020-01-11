@@ -1,7 +1,7 @@
 .sandwitch {
 	position: relative;
 	background-color: #f3f1e9;
-	padding: 75px 0 90px;
+	padding: 75px 0 48px;
 }
 
 .sandwitch::before {
@@ -39,7 +39,7 @@
 	line-height: 20px;
 	letter-spacing: 1.4px;
 	font-family: 'ProximaNovaT-Regular', 'Arial', serif;
-	margin-top: -15px;
+	margin-top: -13px;
 }
 
 .sandwitch-blocks p:nth-child(2) {
@@ -53,7 +53,7 @@
 }
 
 .sandwitch-left .block-2 {
-	margin: 54px auto;
+	margin: 54px auto 57px;
 }
 
 .sandwitch-rigth {
@@ -99,7 +99,7 @@
 	line-height: 30px;
 	letter-spacing: 6px;
 	color: #56534c;
-	margin: 16px auto 14px;
+	margin: 20px auto 16px;
 }
 
 .sandwitch-rigth .inner-block p:nth-child(3) {
@@ -118,10 +118,10 @@
 
 .sandwitch-rigth a {
 	position: absolute;
-	bottom: -19px;
+	bottom: -18px;
 	left: -22px;
-	width: 171px;
-	height: 60px;
+	width: 170px;
+	height: 58px;
 	display: inline-block;
 	text-transform: uppercase;
 	font-family: 'Alegreya', serif;
@@ -152,31 +152,40 @@
 .footer-nav {
 	-ms-align-items: center;
 	align-items: center;
-	margin-top: 114px;
+	margin-top: 113px;
 }
 
 .footer-nav .nav {
 	flex-basis: 514px;
 	border-top: 1px solid #c2beba;
 	border-bottom: 1px solid #c2beba;
-	padding: 26px 0;
+	padding: 22px 0 23px;
 	-ms-align-items: center;
 	align-items: center;
+	justify-content: space-around;
 }
 
 .f-nav-1 {
 	position: relative;
 }
 
-.f-nav-1 ul {
+.f-nav-1 .sub-menu {
 	position: absolute;
-	display: none;
+	text-align: center;
+	top: -120px;
+	left: 0;
+	width: 150px;
+	background-color: rgba(223, 198, 145, 0.2);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
+	box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 5px 5px 0 0;
 }
 
 .f-nav-1 > li:hover .sub-menu {
-	display: block;
-	top: -100px;
-	
+	opacity: 1;
+	visibility: visible;
 } 
 
 .footer-nav .sub-menu li a,
@@ -186,9 +195,102 @@
 	line-height: 24px;
 	letter-spacing: 4.2px;
 	font-family: 'Alegreya', serif;
+	font-weight: 600;
 	color: #56534c;
 }
 
+.footer-nav .menu-item {
+	background-color: transparent;
+}
+
+.footer-nav .f-nav-1 .sub-menu li:hover {
+	width: 100%;
+	background-color: #fff;
+}
+
+.footer-nav .f-nav-1 .sub-menu li:nth-child(1):hover {
+	border-radius: 5px 5px 0 0;
+}
+
 .footer-nav .tilda {
+	font-family: 'Alegreya', serif;
+	font-weight: 600;
 	color: #56534c;
+}
+
+
+@media (max-width: 1270px) {
+	.sandwitch-inner {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.sandwitch-left {
+		flex-basis: 100%;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		margin: 30px auto;
+	}
+	.sandwitch-left .block-2 {
+		margin: 0;
+	}
+	.sandwitch-rigth {
+		position: relative;
+		flex-basis: auto;
+		max-width: 80%;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 40px;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url('../../img/sandwich/Ebene 11.jpg');
+	}
+	.sandwitch-rigth a {
+		position: relative;
+		bottom: -18px;
+		left: 10%;
+		width: 170px;
+		height: 58px;
+	}
+}
+
+@media (max-width: 970px) {
+	.footer-nav {
+		margin-top: 140px;
+		position: relative;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.sandwitch .logo {
+		position: absolute;
+		top: -60px;
+		left: 50%;
+		transform: translateX(-50%);
+	} 
+	.footer-nav .nav {
+		flex-basis: auto;
+		width: 90% !important;
+		border-top: none;
+		border-bottom: none;
+		justify-content: space-between;
+	}
+	.footer-nav .nav a {
+		white-space: nowrap;
+	}
 }

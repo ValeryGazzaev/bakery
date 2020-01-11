@@ -304,7 +304,7 @@
 }
 
 @media (max-width: 1185px) {
-	.ready-in {
+	.tasty .ready-in {
 		top: 20px;
 		right: 0;
 		width: 100px;
@@ -312,12 +312,12 @@
 		box-shadow: -3px 3px 4px 0 rgba(0, 0, 0, 0.32);
 		background-image: url('../../img/pencakes/pancakes-ready.png');
 	}
-	.ready-in p:nth-child(1) {
+	.tasty .ready-in p:nth-child(1) {
 		font-size: 18px;
 		line-height: 30px;
 		margin-top: 0;
 	}
-	.ready-in p:nth-child(2) {
+	.tasty .ready-in p:nth-child(2) {
 		font-size: 50px;
 		line-height: 54px;
 		letter-spacing: 1.8px;
